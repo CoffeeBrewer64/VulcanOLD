@@ -20,8 +20,13 @@ public class AutoClickerA extends Check {
         Player p = e.getPlayer();
         PlayerData data = getDataManager().getPlayerData(p);
         if (e.getPacketId() == PacketType.Client.ARM_ANIMATION) {
+
+            // return if digging or placing a block
             if (data.isDigging || data.isPlacing) return;
+
+            // increase the amount of player swings by one
             data.autoClickerASwings++;
+
             if (data.autoClickerACPS.size() > 0 && elapsed(data.autoClickerACPS.get(1), 1000)) {
                 int cps = data.autoClickerACPS.size();
                 data.lastCPS = cps;
