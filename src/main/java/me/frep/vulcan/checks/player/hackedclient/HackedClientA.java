@@ -3,6 +3,8 @@ package me.frep.vulcan.checks.player.hackedclient;
 import me.frep.vulcan.checks.Check;
 import me.frep.vulcan.checks.CheckType;
 
+// check doesn't exist?
+
 public class HackedClientA extends Check {
 
     public HackedClientA() {
